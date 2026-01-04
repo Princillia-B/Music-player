@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Music Player | devChallenges.io</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <header>
+      <section class="section-header">
+        <h1 class="music">Music <span class="player">Player</span></h1>
+        <h2 id="h2-header">JavaScript Developer Project</h2>
+        <h3>js.html.css</h3>
+      </section>
+    </header>
+
+    <main>
+      <section class="main-section">
+        <img src="resources/cover-1.jpg" alt="Lost in the City Lights" id="song-cover-image">
+        <h2 id="song-title">Lost in the City Lights</h2>
+        <p id="artist-name">Cosmo Sheldrake</p>
+
+        <!--Gestion de l'audio-->
+        <audio id="audio" src="resources/lost-in-city-lights-145038.mp3"  preload="metadata"></audio>
+        <div class="music-duration-bar">
+          <div class="current-time">0:00</span></div>
+          <div class="bar">
+            <div class="bar-fill"></div>
+          </div>
+          <div class="time-duration">0:00</div>
+        </div>
+
+        <div class="lecture">
+          <img src="resources/Stop_and_play_fill-1.svg" alt="" id="previous-song">
+          <img src="resources/Play_fill.svg" alt="" id="play">
+          <img src="resources/Stop_and_play_fill_reverse.svg" alt=""id="next-song">
+        </div>
+      </section>
+    </main>
+
+  
+    <script src="../js/app.js"></script>
+  </body>
+</html>

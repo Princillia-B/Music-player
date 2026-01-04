@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --light-color: white;
+    --play-color: #C93B77;
+    --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-size: 16px;
+}
+
+body {
+    background-image: url("../resources/background.png");
+    background-size: cover;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* header */
+header {
+    margin: 5%;
+}
+
+
+.music {
+    font-size: 4rem;
+    background: linear-gradient(1deg, #7A238B, #CE4F96);
+    position: relative;
+    background-clip: text;
+    color: transparent;
+
+    /* Pour que Safari comprenne*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.player {
+    color: var(--light-color);
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: var(--light-color);
+}
+
+h2 {
+    color: #CDD5E0;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    color: #7D7C8A;
+    text-transform: uppercase;
+}
+
+/* main */
+
+.main-section {
+    position: relative;
+    padding: 2rem;
+    background: #0f1220;
+    border-radius: 1rem;
+}
+
+.main-section::before {
+    content: "";
+    position: absolute;
+    inset: -1rem;
+    
+    border-radius: inherit; /* il prend la même valeur que son parent*/
+    background: linear-gradient(
+            to top,
+            #20254F,
+            #5E2D3F);
+    z-index: -1;
+}
+
+#song-cover-image {
+    padding: 1rem 0.2rem;
+    ;
+    border-radius: 2rem;
+}
+
+#song-title {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+p {
+    text-align: center;
+    margin: 0;
+    color: #7D7C8A;
+    font-size: 1rem;
+}
+
+/* Audio */
+.music-duration-bar {
+    display: flex;
+    justify-content: space-between;
+    color: #7D7C8A;
+    font-size: 0.8rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.bar {
+    height: 0.2rem;
+    flex-grow: 1; /* pour que la barre prenne tout l'espace restant*/
+    background-color: var(--light-color);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden; /* tout ce qui dépasse de la bar, tu le cache. COmme ça on ne voit pas la barre rose dépasée au niveau des bordures arrondis*/
+    margin: 1rem;
+    
+}
+
+.bar-fill{
+    content:"";
+    height: inherit;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--play-color);
+    border-radius: inherit;
+    transition: width 0.08s linear;
+}
+
+.lecture {
+    display: flex;
+    justify-content: center;
+    gap : 1.5rem;
+    padding: 1rem;
+}
+#play{
+    background: var(--play-color);
+    padding: 1rem;
+    border-radius: 3rem; 
+    color: red;
+
+    &:hover {
+        box-shadow: 0rem 0.1rem 1rem var(--play-color);
+    }
+}
+
+#previous-song, #next-song {
+    padding: 1rem;
+}
+
+#previous-song:hover, #next-song:hover {
+            box-shadow: 0rem 0.1rem 1rem black;
+            border-radius: 3rem; 
+}
+
+
+
+

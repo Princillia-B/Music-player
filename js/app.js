@@ -6,10 +6,10 @@ const playBtn = document.getElementById("play");
 playBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    playBtn.src = "./resources/Play_fill.svg";
+    playBtn.src = "./resources/pause.svg";
   } else {
     audio.pause();
-    playBtn.src = "./resources/pause.svg";
+    playBtn.src = "./resources/Play_fill.svg";
   }
 })
 

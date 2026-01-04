@@ -6,10 +6,10 @@ const playBtn = document.getElementById("play");
 playBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    playBtn.src = "../resources/Play_fill.svg";
+    playBtn.src = "./resources/Play_fill.svg";
   } else {
     audio.pause();
-    playBtn.src = "../resources/pause.svg";
+    playBtn.src = "./resources/pause.svg";
   }
 })
 
@@ -99,16 +99,16 @@ const image = document.getElementById("song-cover-image");
 
 const playlist = [
   {
-    src: "../resources/lost-in-city-lights-145038.mp3",
+    src: "./resources/lost-in-city-lights-145038.mp3",
     title: "Lost in the City Lights",
     artist: "Cosmo Sheldrake",
-    image: "../resources/cover-1.jpg"
+    image: "./resources/cover-1.jpg"
   },
   {
-    src: "../resources/forest-lullaby-110624.mp3",
+    src: "./resources/forest-lullaby-110624.mp3",
     title: "Forest Lullaby",
     artist: "Lesfm",
-    image: "../resources/cover-2.jpg"
+    image: "./resources/cover-2.jpg"
   }
 ]
 

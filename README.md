@@ -22,7 +22,7 @@ Mini application web permettant de lire et contrôler des pistes audio directeme
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 - JavaScript Vanilla
 - HTML5 
 - CSS3
